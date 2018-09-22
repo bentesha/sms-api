@@ -2,13 +2,15 @@ const smpp = require("smpp");
 const config = require("./config");
 
 
-const session = smpp.connect(config.smpp.host, (error, status) => {
-  if(error){
-    consoloe.log("Connection error: ", error);
-  } else {
-    console.log("Connected", status);
-  }
-});
+// const session = smpp.connect(config.smpp.host, (error, status) => {
+//   if(error){
+//     consoloe.log("Connection error: ", error);
+//   } else {
+//     console.log("Connected", status);
+//   }
+// });
+
+const session = smpp.connect(config.smpp.host);
 
 const options = {
   system_id: config.smpp.systemId,
