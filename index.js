@@ -22,8 +22,8 @@ session.bind_transceiver(options, pdu => {
 
     //Sending message
     const sms = {
-      destination_addr = '255713809050',
-      short_message = 'From Home Wifi'
+      destination_addr: '255713809050',
+      short_message: 'From Home Wifi'
     };
 
     session.sumbit_sm(sms, pdu => {
